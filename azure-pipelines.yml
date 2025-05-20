@@ -2,7 +2,9 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: az-practice-pool
+  demands:
+  - Agent.Name -equals LHIETBRINKWORK
 
 strategy:
   matrix:
