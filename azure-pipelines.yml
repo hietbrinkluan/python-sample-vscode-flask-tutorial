@@ -2,12 +2,12 @@ trigger:
 - main
 
 pool:
-  name: 'practice-pool'
+  name: 'python-pool'
   demands:
   - Agent.Name -equals LHIETBRINKWORK
 
 variables:
-  PYTHON_ROOT: 'D:\agent\externals\python\3.12.4'
+  PYTHON_ROOT: 'D:\agent\externals\python\3.13.3'
   PIP_CACHE_DIR: 'D:\agent\_work\_temp\.pipcache'
 
 steps:
