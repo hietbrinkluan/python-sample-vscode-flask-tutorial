@@ -7,7 +7,7 @@ pool:
   - Agent.Name -equals LHIETBRINKWORK
 
 variables:
-  PYTHON_ROOT: 'D:\agent\externals\python\3.12.9'
+  PYTHON_ROOT: 'D:\agent\_work\_tool\Python\3.12.9\x64'
   PIP_CACHE_DIR: 'D:\agent\_work\_temp\.pipcache'
 
 steps:
@@ -19,6 +19,8 @@ steps:
     architecture: 'x64'
 
 - script: |
+    echo Using Python from $(PYTHON_ROOT)
+    python --version
     python -m pip install --upgrade pip
     python -m pip install wheel setuptools
   displayName: 'Update pip and install basic tools'
