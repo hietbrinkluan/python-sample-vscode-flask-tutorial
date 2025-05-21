@@ -7,8 +7,9 @@ trigger:
 - main
 
 pool:
-  demands: python-pool
-    -Agent.Name -equals LHIETBRINKWORK
+  name: python-pool
+  demands:
+  - Agent.Name -equals LHIETBRINKWORK
 
 strategy:
   matrix:
