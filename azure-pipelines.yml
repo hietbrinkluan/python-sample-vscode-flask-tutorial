@@ -7,9 +7,9 @@ trigger:
 - main
 
 pool:
-  name: python-pool
+  name: Azure 
   demands:
-  - Agent.Name -equals LHIETBRINKWORK
+  - Agent.Name -equals Hosted Agent
 
 strategy:
   matrix:
