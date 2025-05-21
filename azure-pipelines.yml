@@ -7,14 +7,13 @@ pool:
   - Agent.Name -equals LHIETBRINKWORK
 
 variables:
-  PYTHON_ROOT: 'D:\agent\_work\_tool\Python\3.12.9\x64'
+  PYTHON_ROOT: 'D:\agent\_work\_tool\Python\3.13.3\x64'
   PIP_CACHE_DIR: 'D:\agent\_work\_temp\.pipcache'
 
 steps:
 - task: UsePythonVersion@0
   inputs:
     disableDownloadFromRegistry: true
-    versionSpec: '3.12.9'
     addToPath: true
     architecture: 'x64'
 
