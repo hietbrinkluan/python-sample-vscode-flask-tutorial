@@ -2,11 +2,9 @@ trigger:
 - main
 
 pool:
-  name: python-pool
+  name: python-pool 
   demands:
-  -Agent.Name -equals: LHIETBRINKWORK
-
-
+    - Agent.Name -equals LHIETBRINKWORK
 
 steps:
   - script: |
@@ -21,7 +19,7 @@ steps:
       rootFolderOrFile: $(System.DefaultWorkingDirectory)
       includeRootFolder: false
       archiveType: zip
-      archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId)-$(python.version).zip
+      archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       replaceExistingArchive: true
 
   - task: PublishBuildArtifacts@1
